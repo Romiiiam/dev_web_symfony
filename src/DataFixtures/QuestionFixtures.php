@@ -15,12 +15,9 @@ class QuestionFixtures extends Fixture implements OrderedFixtureInterface
     {
         $faker = Faker\Factory::create('fr_FR');
 
-        $question_users = $manager->getRepository(Users::class)->findAll();
-
-        $i = 0;
         for ($i = 0; $i <= 50; $i++) {
 
-            $user = $question_users[rand(0,50)];
+            $user = $manager->getRepository(Users::class)->findAll()[rand(0,50)];
             $question = new Questions();
 
             $question->setContent($faker->text);
