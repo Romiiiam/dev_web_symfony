@@ -20,7 +20,7 @@ class QuestionFixtures extends Fixture implements OrderedFixtureInterface
         $i = 0;
         for ($i = 0; $i <= 50; $i++) {
 
-            $user = $question_users[rand(0,19)];
+            $user = $question_users[rand(0,50)];
             $question = new Questions();
 
             $question->setContent($faker->text);

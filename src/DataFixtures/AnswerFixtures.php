@@ -14,8 +14,7 @@ class AnswerFixtures extends Fixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         $faker = Faker\Factory::create('fr_FR');
-        
-        $i = 0;
+
         for ($i = 0; $i <= 50; $i++) {
             $answser_user = new Users();
             $answser_user->setName($faker->word);
